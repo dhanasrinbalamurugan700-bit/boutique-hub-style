@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>StyleSphere</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#fff5f7;
+}
+
+header{
+background:#ff4f81;
+padding:20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+header h1{
+color:white;
+font-size:30px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+font-weight:bold;
+}
+
+nav a:hover{
+color:#ffe3ec;
+}
+
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),
+url('https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=1200&auto=format&fit=crop');
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+padding:20px;
+}
+
+.hero h2{
+font-size:60px;
+margin-bottom:20px;
+}
+
+.hero p{
+width:70%;
+font-size:22px;
+margin-bottom:30px;
+}
+
+.btn{
+padding:14px 28px;
+border:none;
+border-radius:30px;
+background:#ff4f81;
+color:white;
+font-size:18px;
+cursor:pointer;
+}
+
+.btn:hover{
+background:#e63b6f;
+}
+
+section{
+padding:70px 40px;
+}
+
+section h2{
+text-align:center;
+color:#ff4f81;
+margin-bottom:40px;
+font-size:42px;
+}
+
+.feature-box{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:18px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+cursor:pointer;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card h3{
+color:#ff4f81;
+margin-bottom:15px;
+}
+
+.fashion-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+}
+
+.fashion-card{
+background:white;
+border-radius:18px;
+overflow:hidden;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.fashion-card img{
+width:100%;
+height:350px;
+object-fit:cover;
+}
+
+.fashion-card h3{
+padding:15px;
+text-align:center;
+}
+
+.chat-box{
+width:70%;
+margin:auto;
+height:400px;
+background:white;
+border-radius:18px;
+padding:20px;
+overflow-y:auto;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.ai-msg,
+.user-msg{
+padding:12px;
+margin:12px;
+border-radius:10px;
+max-width:80%;
+}
+
+.ai-msg{
+background:#ffe3ec;
+text-align:left;
+}
+
+.user-msg{
+background:#ff4f81;
+color:white;
+margin-left:auto;
+text-align:right;
+}
+
+.chat-input{
+text-align:center;
+margin-top:20px;
+}
+
+.chat-input input{
+width:50%;
+padding:12px;
+border:none;
+border-radius:10px;
+}
+
+.chat-input button{
+padding:12px 20px;
+border:none;
+background:#ff4f81;
+color:white;
+border-radius:10px;
+cursor:pointer;
+margin-left:10px;
+}
+
+.order-card{
+background:white;
+padding:25px;
+width:60%;
+margin:20px auto;
+border-radius:18px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.contact-form{
+width:60%;
+margin:auto;
+background:white;
+padding:30px;
+border-radius:18px;            
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.contact-form input,
+.contact-form textarea{
+width:100%;
+padding:12px;
+margin-bottom:20px;
+border-radius:10px;
+border:1px solid #ccc;
+}
+
+.contact-form button{
+padding:12px 20px;
+border:none;
+background:#ff4f81;
+color:white;
+border-radius:10px;
+cursor:pointer;
+}
+
+footer{
+background:#ff4f81;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Style Sphere-A Boutique Hub</h1>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#fashion">Fashion</a>
+<a href="#ai">AI Stylist</a>
+<a href="#orders">Orders</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</header>
+
+<!-- HOME -->
+
+<section class="hero" id="home">
+
+<h2>Fashion Universe</h2>
+
+<p>
+Unlock Your Perfect Look With AI Styling,Trendy Collection, 
+And Seamless Boutique Orders. 
+</p>
+
+<a href="#fashion">
+<button class="btn">Style Journey</button>
+</a>
+
+</section>
+
+<!-- FEATURES -->
+
+<section>
+
+<h2>Our Features</h2>
+
+<div class="feature-box">
+
+<div class="card" onclick="location.href='#fashion'">
+<h3> Smart Fashion Feed</h3>
+<p>Explore Traditional Fits and Western Fashion Trends.</p>
+</div>
+
+<div class="card" onclick="location.href='#ai'">
+<h3> AI Style Assistant</h3>
+<p>Get Outfit and Color Suggestions Instantly.</p>
+</div>
+
+<div class="card" onclick="location.href='#orders'">
+<h3> Custom Boutique Orders</h3>
+<p>Upload Your Measurements and Customize Dresses.</p>
+</div>
+
+<div class="card" onclick="location.href='#contact'">
+<h3> Smart Booking </h3>
+<p>Book Appointments For Styling Sessions.</p>
+</div>
+
+<div class="card" onclick="location.href='#orders'">
+<h3> Live Order Tracking</h3>
+<p>Track Your Stitching Progress and Delivery status in real-time.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- FASHION -->
+
+<section id="fashion">
+
+<h2>Style Studio Collection</h2>
+
+<div class="fashion-grid">
+
+<div class="fashion-card">
+<img src="45ab858e-d368-4ae5-a4b3-8b0e7fe76428.png">
+<h3>Ethnic Wear</h3>
+</div>
+
+<div class="fashion-card">
+<img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=800&auto=format&fit=crop">
+<h3>Western Trends</h3>
+</div>
+
+<div class="fashion-card">
+<img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=1200&auto=format&fit=crop">
+<h3>Saree Draping</h3>
+</div>
+
+</div>
+
+</section>
+
+<!-- AI -->
+
+<section id="ai">
+
+<h2>AI Fashion Stylist </h2>
+
+<div class="chat-box" id="chatBox">
+
+<div class="ai-msg">
+AI Stylist: Hello  How can I help you today?
+</div>
+
+</div>
+
+<div class="chat-input">
+
+<input type="text" id="userInput" placeholder="Ask fashion suggestions...">
+
+<button onclick="sendMessage()">Send</button>
+
+</div>
+
+</section>
+
+<!-- ORDERS -->
+
+<section id="orders">
+
+<h2>Order Tracking </h2>
+
+<div class="order-card">
+<p><b>Style ID:</b> SD5761</p>
+<p><b>Outfit:</b>Anarkali</p>
+<p><b>Progress:</b>Desinging your Outfit </p>
+</div>
+
+<div class="order-card">
+<p><b>Style ID:</b> SD0929</p>
+<p><b>Outfit:</b>Body suit+Flared Jeans</p>
+<p><b>Progress:</b> Style is Arriving </p>
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<h2>Connect With Us </h2>
+
+<div class="contact-form">
+
+<input type="text" placeholder="Enter your name">
+
+<input type="email" placeholder="Enter your email">
+
+<textarea rows="5" placeholder="Enter your message"></textarea>
+
+<button>Drop a Message</button>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>© 2026 Style Sphere-A Boutique Hub|Style Powered By Intelligence</p>
+
+</footer>
+
+<script>
+
+function sendMessage(){
+
+let input = document.getElementById("userInput");
+
+let chatBox = document.getElementById("chatBox");
+
+if(input.value.trim() === ""){
+return;
+}
+
+let userMsg = document.createElement("div");
+
+userMsg.className = "user-msg";
+
+userMsg.innerHTML = "You: " + input.value;
+
+chatBox.appendChild(userMsg);
+
+let aiReply = document.createElement("div");
+
+aiReply.className = "ai-msg";
+
+aiReply.innerHTML =
+"AI Stylist: That outfit would look amazing with matching accessories ";
+
+chatBox.appendChild(aiReply);
+
+input.value = "";
+
+chatBox.scrollTop = chatBox.scrollHeight;
+
+}
+
+</script>
+
+</body>
+</html>
